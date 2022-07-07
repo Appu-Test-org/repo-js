@@ -4,7 +4,7 @@ const github = require('@actions/github');
 const main = async () => {
   try {
     const org = core.getInput('owner', { required: true });
-    const repo = core.getInput('repo', { required: true });
+    const name = core.getInput('repo', { required: true });
 //     const pr_number = core.getInput('pr_number', { required: true });
     const token = core.getInput('token', { required: true });
 //     const name = core.getInput('name', { required: true });

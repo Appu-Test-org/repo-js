@@ -18,7 +18,7 @@ jobs:
     name: repo from org
     steps:
       - name: create-repo
-        uses: philips-test-org/repo-create-js@main
+        uses: Appu-Test-org/repo-js@main
         with:
           repo: ${{ github.event.inputs.repo}}
           owner: ${{ github.event.inputs.owner}}

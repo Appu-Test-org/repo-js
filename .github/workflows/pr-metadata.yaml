@@ -1,0 +1,25 @@
+name: create repo
+on: 
+  workflow_dispatch:
+   inputs:
+      repo:
+        description: 'Repository name'     
+        required: true
+      owner:
+        type: choice
+        description: Select Organization
+        options:
+        - philips-test-org
+        - Appu-Test-org
+        - Unit-II-Org
+jobs:
+  annotate-pr:
+    runs-on: ubuntu-latest
+    name: repo from org
+    steps:
+      - name: create-repo
+        uses: philips-test-org/repo-create-js@main
+        with:
+          repo: ${{ github.event.inputs.repo}}
+          owner: ${{ github.event.inputs.owner}}
+          token: ${{ secrets.REPO_SECRETE }}

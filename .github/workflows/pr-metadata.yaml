@@ -22,4 +22,4 @@ jobs:
         with:
           repo: ${{ github.event.inputs.repo}}
           owner: ${{ github.event.inputs.owner}}
-          token: ${{ secrets.REPO_SECRETE }}
+          token: ${{ secrets.token }}

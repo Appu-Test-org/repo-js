@@ -9,7 +9,7 @@ const main = async () => {
     const token = core.getInput('token', { required: true });
 //     const name = core.getInput('name', { required: true });
     const octokit = new github.getOctokit(token);
-    var data=await octokit.request(`UPDATE /repos/{org}/{name}`, {
+    var data=await octokit.request(`UPDATE /repos/{org}/{name}/`, {
         owner: org,
         repo: name,
        visibility:'private'

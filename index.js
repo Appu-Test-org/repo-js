@@ -9,11 +9,12 @@ const main = async () => {
     const token = core.getInput('token', { required: true });
 //     const name = core.getInput('name', { required: true });
     const octokit = new github.getOctokit(token);
-      await octokit.rest.repos.createInOrg({
+     const data= await octokit.rest.repos.createInOrg({
       org,
       name,
       visibility:'private'
     });
+    console.log(data);
 
    
   } 

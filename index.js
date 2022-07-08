@@ -12,6 +12,7 @@ const main = async () => {
       await octokit.rest.repos.createInOrg({
       org,
       name,
+      visibility:'private'
     });
 
    
